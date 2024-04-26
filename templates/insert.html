@@ -1,0 +1,33 @@
+{% extends 'adminhome.html' %}
+{% block 'b1' %}
+<h2 align="center"><font color="green">Insert page</font></h2>
+<form method="post" action="{% url 'checkinsert' %}">
+    {% csrf_token %}
+    <table align="center" >
+<html>
+<head>
+    <title>Insert New Record</title>
+</head>
+<body>
+
+<h2 align="center">Add New Information</h2>
+
+<form action="/insert-information" method="post">
+ <tr>
+     <td><label for="name">Name:</label><br></td>
+    <td><input type="text" id="name" name="name" required><br></td>
+ </tr>
+
+<tr>
+    <td><label for="email">Email:</label><br></td>
+    <td><input type="email" id="email" name="email" required><br></td>
+</tr>
+
+
+    <td align="center"><input type="submit" value="Insert"></td>
+    <td align="center"><input type="reset" value="clear"></td>
+</form>
+
+</body>
+</html>
+{% endblock %}

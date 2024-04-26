@@ -1,0 +1,33 @@
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Automobile Management System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body  style="background-image: url('{% static 'images/789456.jpg' %}');
+background-repeat:no-repeat;background-size:100%;";>
+</body>
+
+<a href="{% url 'register' %}"> Sign-up  </a>&nbsp&nbsp&nbsp
+<a href="{% url 'login' %}">Login  </a>&nbsp&nbsp&nbsp
+<a href="{% url 'home' %}">Home  </a>&nbsp&nbsp&nbsp
+<a href="{% url 'contact' %}">Contact Us  </a>&nbsp&nbsp&nbsp
+<a href="{% url 'about' %}">About Us  </a>&nbsp&nbsp&nbsp
+<a href="{% url 'insert' %}">Insert  </a>&nbsp&nbsp&nbsp
+<a href="{% url 'update' %}">Update  </a>&nbsp&nbsp&nbsp
+<a href="{% url 'delete' %}">Delete  </a>&nbsp&nbsp&nbsp
+<a href="{% url 'payment' %}">Payment  </a>
+<br><br><br>
+{% block 'b1' %}
+<h2 align="center"><font color="red"> Automobile Management System </font></h2>
+
+
+</body>
+
+</html>
+{% endblock %}

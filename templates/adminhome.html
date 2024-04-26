@@ -1,0 +1,54 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Automobile Management System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+
+<body style="background-image: url('{% static 'images/456.jpg' %}');
+background-repeat:no-repeat;background-size:99.9%;";>
+    <h1 style="text-align:center;color: red;">Automobile Management System</h1>
+
+
+
+
+
+    <script>
+        function insertVehicle() {
+            // Implement the functionality to insert a vehicle
+            console.log("Insert Vehicle button clicked");
+        }
+
+        function updateVehicle() {
+            // Implement the functionality to update a vehicle
+            console.log("Update Vehicle button clicked");
+        }
+
+        function deleteVehicle() {
+            // Implement the functionality to delete a vehicle
+            console.log("Delete Vehicle button clicked");
+        }
+    </script>
+<div>
+    <ul>
+        <a href="{% url 'checkinsertvehicle' %}"> Insertvehicle</a>&nbsp&nbsp&nbsp
+        <a href="{% url 'checkupdatevehicle' %}"> Updatevehicle</a>&nbsp&nbsp&nbsp
+        <a href="{% url 'checkdeletevehicle' %}"> DeleteVehicle</a>&nbsp&nbsp&nbsp
+        <a href="{% url 'checkfeedback' %}"> FeedBack</a>&nbsp&nbsp&nbsp
+
+    </ul>
+</div>
+</body>
+</html>

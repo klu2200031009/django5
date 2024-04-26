@@ -1,0 +1,136 @@
+<a href="{% url 'insertvehicle' %}" xmlns:box-shadow="http://www.w3.org/1999/xhtml"
+   xmlns:box-shadow="http://www.w3.org/1999/xhtml" xmlns:box-shadow="http://www.w3.org/1999/xhtml">  </a>&nbsp&nbsp&nbsp
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+            color: #666;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('{% static 'images/1289.jpg' %}');
+background-repeat:no-repeat;background-size:100%;";>
+
+
+{% block 'b1' %}
+<h2 align="center"><font color="green">Vehicle Details page</font></h2>
+<form method="post" action="{% url 'checkinsertvehicle' %}">
+    {% csrf_token %}
+    <table align="center" border="2">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Information</title>
+</head>
+<body  style="background-image: url('{% static 'images/klu.jpg' %}');
+background-repeat:no-repeat;background-size:100%;";>
+</body>
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Information Table</title>
+    <style>
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1 align ="center">Vehicle Details</h1>
+    <table align="center" >
+    <form action="/insert-information" method="post">
+
+<tr>
+    <td><label for="name">Number of the Vehicles :</label><br></td>
+    <td><input type="text"  name="name" required><br></td>
+</tr>
+
+
+<tr>
+     <td ><label for="name">Name of the Vehicle:</label><br></td>
+    <td><input type="text"  id="name" name="cname" required><br></td>
+</tr>
+
+<tr>
+   <td><label for="name">Year of Manufacture:</label><br></td>
+    <td><input type="text"  name="yname" required><br></td>
+</tr>
+<tr>
+     <td><label for="name">Problem of your vehicle:</label><br></td>
+    <td><input type="text"  name="pname" required><br></td>
+</tr>
+<tr>
+     <td><label for="name">How often do you go to service station:</label><br></td>
+    <td><input type="text"  name="hname" required><br></td>
+</tr>
+
+
+   <td align="center"><input type="submit" value="Insert"></td>
+    <td align="center"><input type="reset" value="clear"></td>
+
+    </form>
+
+
+
+
+    </table>
+
+
+</body>
+
+
+</html>
+
+
+
+{% endblock %}

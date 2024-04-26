@@ -1,0 +1,177 @@
+<a href="{% url 'feedback' %}">  </a>&nbsp&nbsp&nbsp
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Automobile Management System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body style="background-image: url('{% static 'images/456.jpg' %}');
+background-repeat:no-repeat;background-size:100%;";>
+
+
+{% block 'b1' %}
+<h2 align="center"><font color="orange">Feed Back</font></h2>
+<form method="post" action="{% url 'checkfeedback' %}">
+    {% csrf_token %}
+    <table align="center" >
+<html>
+<head>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="feedback"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+         input[type="reset"] {
+            width: 40%;
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+        .login-link,
+        .register-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .login-link a,
+        .register-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body>
+
+
+
+<form action="/submit-your-feedback" method="post">
+    <tr>
+       <td> <label for="name">Name:</label><br></td>
+    <td><input type="text" id="name" name="name" required><br></td>
+    </tr>
+
+<tr>
+   <td><label for="email">Email:</label><br></td>
+    <td><input type="email" id="email" name="email" required><br></td>
+
+</tr>
+<tr>
+    <td><label for="message">Feedback:</label><br></td>
+    <td><textarea id="message" name="message" rows="5" cols="25" required></textarea><br></td>
+</tr>
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .emoji-rating {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .emoji-rating input[type="radio"] {
+            display: none;
+        }
+
+        .emoji-rating label {
+            font-size: 32px;
+            cursor: pointer;
+        }
+
+        .emoji-rating input[type="radio"]:checked + label {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="emoji-rating">
+        <input type="radio" id="rating-1" name="rating" value="1">
+        <label for="rating-1">😠</label>
+
+        <input type="radio" id="rating-2" name="rating" value="2">
+        <label for="rating-2">😟</label>
+
+        <input type="radio" id="rating-3" name="rating" value="3">
+        <label for="rating-3">😐</label>
+
+        <input type="radio" id="rating-4" name="rating" value="4">
+        <label for="rating-4">😊</label>
+
+        <input type="radio" id="rating-5" name="rating" value="5" checked>
+        <label for="rating-5">😍</label>
+    </div>
+    <td align="center"><input type="submit" value="submit"></td>
+    <td align="center"><input type="reset" value="clear"></td>
+
+
+</form>
+
+
+
+
+</body>
+</html>
+{% endblock %}
